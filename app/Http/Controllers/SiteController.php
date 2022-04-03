@@ -36,10 +36,9 @@ class SiteController extends Controller
 
     public function store(Request $request) {
         $facts = new Fact;
+
         $facts->faits = $request->fait;
-        // $facts->longueur = $request->longueur;
-        $facts->longueur = 2;
-        // dd($facts);
+        $facts->longueur = strlen($request->fait);
 
 
         $facts->save();
