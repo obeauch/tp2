@@ -17,4 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [SiteController::class, 'index']);
 Route::get('/faits', [SiteController::class, 'faits']);
 Route::post('/faits', [SiteController::class, 'store']);
+Route::post('/faits/modifier', [SiteController::class, 'storeUpdate']);
 Route::get('/ajout', [SiteController::class, 'create']);
+Route::get('/modifier/{id}', [SiteController::class, 'update']);
+Route::get('/supprimer/{id}', [SiteController::class, 'destroy']);

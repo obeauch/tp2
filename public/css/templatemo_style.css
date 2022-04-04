@@ -143,50 +143,6 @@ nav.main-navigation {
 }
 
 
-
-
-
-
-
-
-
-
-/* Mon css */
-span.fact-number {
-    padding-right: 10px;
-}
-
-span.fact-text {
-    padding-left: 10px;
-}
-
-.form-titre {
-    text-align: center;
-}
-
-.bouton-formulaire {
-    margin: 20px auto;
-    text-align: center;
-}
-
-.formulaire {
-    margin: 0px auto;
-    width: 400px;
-    height: 150px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
 ul.main-menu li {
     display: inline-block;
     margin-left: 10px;

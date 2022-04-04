@@ -11,21 +11,40 @@
 		<div id="menu-1" class="homepage home-section container">
 			<div class="home-intro text-left">
                 @foreach ($facts as $fact)
-				    <p><span class="fact-number">FAIT #{{ $fact->id }}</span>-<span class="fact-text">{!! substr($fact->faits, 0, 40). "..." !!}</span></p>
+				    <div class="d-flex justify-content-between  ligne-texte">
+                        <div class="texte-only">
+                            <span class="fact-number">FAIT #{{ $fact->id }}</span>
+                            <span class="fact-text">{!! substr($fact->faits, 0, 40). "..." !!}</span>
+                        </div>
+
+                        <div class="boutons-droits">
+                            <span>
+                                <a href="/modifier/{{ $fact->id }}">
+                                    <button type="button" class="btn-success">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                                            <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                                        </svg>
+                                    </button>
+                                </a>
+                            </span>
+                            <span>
+                                <a href="/supprimer/{{ $fact->id }}">
+                                    <button type="button" class="btn-danger">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                            <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+
+                                            <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+
+                                          </svg>
+                                    </button>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                    {{-- <div class="ligne"></div> --}}
+
                 @endforeach
 				{{-- <h2 class="welcome-title animated fadeInLeft">Fait #{{ $facts->id }}</h2> --}}
-			</div>
-			<div class="home-projects">
-				<div class="row">
-					<div class="project-home-holder">
-						<div class="row">
-                            <x-images img-id="2"/>
-                            <x-images img-id="4"/>
-                            <x-images img-id="6"/>
-                            <x-images img-id="8"/>
-						</div>
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>

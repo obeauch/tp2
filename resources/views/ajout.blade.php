@@ -1,10 +1,18 @@
 <x-layout>
-    <x-slot name="title">Accueil</x-slot>
+    <x-slot name="title">Ajout</x-slot>
 
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
 
 	<div id="menu-container">
-        <form class=" d-flex flex-column align-items-center" action="/faits" method="post"
-        enctype="multipart/form-data">
+        <form class=" d-flex flex-column align-items-center" action="/faits" method="post">
             @csrf
 
             <div class="form-floating ps-5 py-5 my-5">

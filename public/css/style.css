@@ -1,0 +1,40 @@
+/* Mon css */
+span.fact-number {
+    padding-right: 10px;
+}
+
+span.fact-text {
+    padding-left: 10px;
+}
+
+.form-titre {
+    text-align: center;
+}
+
+.bouton-formulaire {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.formulaire {
+    margin: 0px auto;
+    width: 400px;
+    height: 150px;
+}
+
+.ligne-texte {
+    border-bottom: 2px solid #46494f;
+    padding: 20px;
+    /* height: 100px; */
+}
+
+.ligne {
+    color: #46494f;
+    height: 2px;
+    min-width: 200px;
+    max-width: 400px;
+}
+
+/* .texte-only {
+    width: 100%;
+} */
