@@ -30,7 +30,9 @@ class FactRequest extends FormRequest
 
     public function messages(){
         return [
+            'fait.required' => 'Un fait est requis',
             'fait.min' => 'La longueur du fait doit être d\'au moins 10 caractères',
+            'fait.max' => 'La longueur du fait doit avoir un maximum de 255 caractères',
         ];
     }
 }

@@ -1,9 +1,9 @@
 /* Mon css */
-span.fact-number {
+.fact-number {
     padding-right: 10px;
 }
 
-span.fact-text {
+.fact-text {
     padding-left: 10px;
 }
 
@@ -11,12 +11,80 @@ span.fact-text {
     text-align: center;
 }
 
-.bouton-formulaire {
-    margin: 20px auto;
-    text-align: center;
+.form-control {
+    border-radius: 0px;
 }
 
-.formulaire {
+/* boutons des formulaires */
+.bouton-formulaire {
+    margin: 10px auto;
+    text-align: center;
+
+}
+
+.bouton-modif {
+    background-color: #5fa6dc;
+    border: 0px;
+}
+
+.bouton-modif:hover {
+    background-color: #477aa1;
+    border: 0px;
+    transition: all 100ms ease-in-out;
+}
+
+.bouton-supp {
+    border: 0px;
+}
+
+.bouton-supp:hover {
+    border: 0px;
+}
+
+/* boutons des formulaires */
+button {
+    background-color: transparent;
+    margin: 3px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 10px 15px;
+    border: 2px solid #46494f;
+}
+
+button:hover {
+    background-color: #5fa6dc;
+    border: 2px solid #5fa6dc;
+    transition: all 100ms ease-in-out;
+}
+
+/**
+    Message flashé
+ **/
+ .flash {
+    position: fixed;
+    top: 140px;
+    left: 50px;
+    background-color: #5fa6dc;
+    color: white;
+    padding: 10px;
+    box-shadow: 2px 2px 5px #222;
+    animation: fadeout ease 5s forwards;
+  }
+
+  @keyframes fadeout {
+    0% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+.zone-textarea {
     margin: 0px auto;
     width: 400px;
     height: 150px;
@@ -28,13 +96,3 @@ span.fact-text {
     /* height: 100px; */
 }
 
-.ligne {
-    color: #46494f;
-    height: 2px;
-    min-width: 200px;
-    max-width: 400px;
-}
-
-/* .texte-only {
-    width: 100%;
-} */

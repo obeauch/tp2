@@ -46,13 +46,15 @@ class SiteController extends Controller
         return redirect('/faits')->with('success', 'Fait ajouté!');
     }
 
+    // Fonction qui retourne vers la page modifier avec un id
     public function update($id){
         return view('modifier', [
                 "fait" => Fact::find($id),
             ]);
     }
 
-
+    // Effectue la modification dans la bdd et redirige
+    // vers la page de faits avec un message de réussite
     public function storeUpdate(FactRequest $request)
     {
         $facts = Fact::findOrFail($request->id);
@@ -61,12 +63,14 @@ class SiteController extends Controller
 
         $facts->save();
 
-        return redirect('/faits')->with('success', 'Publication modifiée!');
+        return redirect('/faits')->with('update', 'Fait modifié!');
     }
 
+    // Supprime de la bdd et retourne à la page de faits
+    // avec message de réussite
     public function destroy($id){
         Fact::destroy($id);
 
-        return redirect('/faits')->with('destroy', 'Suppression effectuée');
+        return redirect('/faits')->with('destroy', 'Suppression effectuée!');
     }
 }
